@@ -4,7 +4,7 @@ var wms_layers = [];
         var lyr_OpenTopoMap_0 = new ol.layer.Tile({
             'title': 'OpenTopoMap',
             'type':'base',
-            'opacity': 1.000000,
+            'opacity': 0.750000,
             
             
             source: new ol.source.XYZ({
@@ -38,7 +38,7 @@ var lyr_LongDistanceRoutes_2 = new ol.layer.Vector({
                 style: style_LongDistanceRoutes_2,
                 popuplayertitle: 'Long Distance Routes',
                 interactive: false,
-                title: '<img src="styles/legend/LongDistanceRoutes_2.png" /> Long Distance Routes'
+                // title: '<img src="styles/legend/LongDistanceRoutes_2.png" /> null' //to avoid LongDistanceRoutes_2 being displayed in the switcher's legend
             });
 
 var format_Multidaychallenges_3 = new ol.format.GeoJSON();
