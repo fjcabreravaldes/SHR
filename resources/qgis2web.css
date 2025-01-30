@@ -251,6 +251,15 @@ table td {
     text-align: center; 
 }
 
+.tab2-titles{
+    padding-top: 3px;
+    padding-bottom: 3px;
+    color: #124466;
+    size: 13px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+}
 .col-tab2 {
     padding-top: 3px;
     padding-bottom: 3px;
