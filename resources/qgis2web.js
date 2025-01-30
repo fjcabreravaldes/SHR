@@ -478,34 +478,28 @@ function onSingleClickFeatures(evt) {
                     <div class="tab-content" id="${uniqueId}-tab2" style="display:none;">
                         <table>
                             <tr>
-                                <td class="col-tab2">${currentFeature.get('p_OR')}</td>
+                                <td class="tab2-titles">Open Records</td>
                             </tr>
                             <tr>
-                                <td class="col1">${currentFeature.get('FR Munros') ? 'FR: ' + currentFeature.get('FR Munros') : 'FR:'}</td>
-                                <td class="col2">${currentFeature.get('FR d') ? currentFeature.get('FR d') + 'd' : ''}</td>
-                                <td class="col3">${currentFeature.get('FR h') ? currentFeature.get('FR h') + 'h' : ''}</td>
-                                <td class="col4">${currentFeature.get('FR m') ? currentFeature.get('FR m') + 'm' : ''}</td>
-                                <td class="col5">${currentFeature.get('FR s') ? currentFeature.get('FR s') + 's' : ''}</td>
-                                <td class="col6">${currentFeature.get('FR holder') ? currentFeature.get('FR holder') : '<span style="font-weight: normal;">N/A</span>'}</td>
-                                <td class="col7">${currentFeature.get('FR date') ||  ''}</td>
+                                <td class="col-tab2">${currentFeature.get('p_OR') ? currentFeature.get('p_OR') : '<span style="font-weight: normal;">N/A</span>'}</td>
                             </tr>
                             <tr>
-                                <td class="col1">${currentFeature.get('WOR Munros') ? 'WOR: ' + currentFeature.get('WOR Munros') : 'WOR:'}</td>
-                                <td class="col2">${currentFeature.get('WOR d') ? currentFeature.get('WOR d') + 'd' : ''}</td>
-                                <td class="col3">${currentFeature.get('WOR h') ? currentFeature.get('WOR h') + 'h' : ''}</td>
-                                <td class="col4">${currentFeature.get('WOR m') ? currentFeature.get('WOR m') + 'm' : ''}</td>
-                                <td class="col5">${currentFeature.get('WOR s') ? currentFeature.get('WOR s') + 's' : ''}</td>
-                                <td class="col6">${currentFeature.get('WOR holder') ? currentFeature.get('WOR holder') : '<span style="font-weight: normal;">N/A</span>'}</td>
-                                <td class="col7">${currentFeature.get('WOR date') ||  ''}</td>
+                                <td class="tab2-titles">Female Records</td>
                             </tr>
                             <tr>
-                                <td class="col1">${currentFeature.get('WFR Munros') ? 'WFR: ' + currentFeature.get('WFR Munros') : 'WFR:'}</td>
-                                <td class="col2">${currentFeature.get('WFR d') ? currentFeature.get('WFR d') + 'd' : ''}</td>
-                                <td class="col3">${currentFeature.get('WFR h') ? currentFeature.get('WFR h') + 'h' : ''}</td>
-                                <td class="col4">${currentFeature.get('WFR m') ? currentFeature.get('WFR m') + 'm' : ''}</td>
-                                <td class="col5">${currentFeature.get('WFR s') ? currentFeature.get('WFR s') + 's' : ''}</td>
-                                <td class="col6">${currentFeature.get('WFR holder') ? currentFeature.get('WFR holder') : '<span style="font-weight: normal;">N/A</span>'}</td>
-                                <td class="col7">${currentFeature.get('WFR date') ||  ''}</td>
+                                <td class="col-tab2">${currentFeature.get('p_FR') ? currentFeature.get('p_FR') : '<span style="font-weight: normal;">N/A</span>'}</td>
+                            </tr>
+                            <tr>
+                                <td class="tab2-titles">Winter Open Records</td>
+                                </tr>
+                            <tr>
+                                <td class="col-tab2">${currentFeature.get('p_WOR') ? currentFeature.get('p_WOR') : '<span style="font-weight: normal;">N/A</span>'}</td>
+                            </tr>
+                            <tr>
+                                <td class="tab2-titles">Winter Female Records</td>
+                                </tr>
+                            <tr>
+                                <td class="col-tab2">${currentFeature.get('p_WFR') ? currentFeature.get('p_WFR') : '<span style="font-weight: normal;">N/A</span>'}</td>
                             </tr>
                         </table>
                     </div>
