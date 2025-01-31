@@ -659,6 +659,14 @@ function onSingleClickWMS(evt) {
 
 map.on('singleclick', onSingleClickFeatures);
 map.on('singleclick', onSingleClickWMS);
+map.on('singleclick', function (evt) {
+    const feature = map.forEachFeatureAtPixel(evt.pixel, function (feature) {
+        return feature;
+    });
+
+    if (feature) {
+        showPopupWithFormattedText(evt.coordinate, feature);
+    }
 
 //get container
 var topLeftContainerDiv = document.getElementById('top-left-container')
