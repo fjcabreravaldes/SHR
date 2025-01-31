@@ -115,6 +115,25 @@ var featureOverlay = new ol.layer.Vector({
 var doHighlight = true; // highlights feature when hovering over it
 var doHover = false;
 
+function formatPopupText(attributeValue) {
+    // Split the string by commas
+    const parts = attributeValue.split(',');
+
+    // Join the parts with line breaks and trim each part
+    const formattedText = parts.map(part => part.trim()).join('<br>');
+
+    return formattedText;
+}
+
+// Function to show the popup with the formatted text
+function showPopupWithFormattedText(coord, feature) {
+    const content = document.getElementById('popup-content');
+
+    // Get the attribute value
+    const originalText = feature.get('p_OR');
+    const formattedText = formatPopupText(originalText);
+}
+
 function createPopupField(currentFeature, currentFeatureKeys, layer) {
     var popupText = '';
     for (var i = 0; i < currentFeatureKeys.length; i++) {
