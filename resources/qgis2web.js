@@ -116,22 +116,21 @@ var doHighlight = true; // highlights feature when hovering over it
 var doHover = false;
 
 function formatPopupText(attributeValue) {
-    // Split the string by commas
-    const parts = attributeValue.split(',');
-
-    // Join the parts with line breaks and trim each part
-    const formattedText = parts.map(part => part.trim()).join('<br>');
-
-    return formattedText;
+    if (!attributeValue) return '<span style="font-weight: normal;">N/A</span>'; // Handle empty values
+    
+    // Split the string by commas, trim each part, and join with line breaks
+    return attributeValue.split(',').map(part => part.trim()).join('<br>');
 }
 
-// Function to show the popup with the formatted text
+// Function to display the popup with formatted text for multiple fields
 function showPopupWithFormattedText(coord, feature) {
     const content = document.getElementById('popup-content');
 
-    // Get the attribute value
-    const originalText = feature.get('p_OR');
-    const formattedText = formatPopupText(originalText);
+    // Get formatted values for the four fields
+    const formatted_p_OR = formatPopupText(feature.get('p_OR'));
+    const formatted_p_FR = formatPopupText(feature.get('p_FR'));
+    const formatted_p_WOR = formatPopupText(feature.get('p_WOR'));
+    const formatted_p_WFR = formatPopupText(feature.get('p_WFR'));
 }
 
 function createPopupField(currentFeature, currentFeatureKeys, layer) {
@@ -500,25 +499,25 @@ function onSingleClickFeatures(evt) {
                                 <td class="tab2-titles">Open Records</td>
                             </tr>
                             <tr>
-                                <td class="col-tab2">${currentFeature.get('p_OR') ? currentFeature.get('p_OR') : '<span style="font-weight: normal;">N/A</span>'}</td>
+                                <td class="col-tab2">${formatted_p_OR}</td>
                             </tr>
                             <tr>
                                 <td class="tab2-titles">Female Records</td>
                             </tr>
                             <tr>
-                                <td class="col-tab2">${currentFeature.get('p_FR') ? currentFeature.get('p_FR') : '<span style="font-weight: normal;">N/A</span>'}</td>
+                                <td class="col-tab2">${formatted_p_FR}</td>
                             </tr>
                             <tr>
                                 <td class="tab2-titles">Winter Open Records</td>
                                 </tr>
                             <tr>
-                                <td class="col-tab2">${currentFeature.get('p_WOR') ? currentFeature.get('p_WOR') : '<span style="font-weight: normal;">N/A</span>'}</td>
+                                <td class="col-tab2">${formatted_p_WOR}</td>
                             </tr>
                             <tr>
                                 <td class="tab2-titles">Winter Female Records</td>
                                 </tr>
                             <tr>
-                                <td class="col-tab2">${currentFeature.get('p_WFR') ? currentFeature.get('p_WFR') : '<span style="font-weight: normal;">N/A</span>'}</td>
+                                <td class="col-tab2">${formatted_p_WFR}</td>
                             </tr>
                         </table>
                     </div>
