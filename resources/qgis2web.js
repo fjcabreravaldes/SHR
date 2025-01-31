@@ -481,25 +481,25 @@ function onSingleClickFeatures(evt) {
                                 <td class="tab2-titles">Open Records</td>
                             </tr>
                             <tr>
-                                <td class="col-tab2">${currentFeature.get('p_OR') ? currentFeature.get('p_OR') : '<span style="font-weight: normal;">N/A</span>'}</td>
+                                <td class="col-tab2">${currentFeature.get('p_OR') ? currentFeature.get('p_OR').replace(/,\s*/g, '<br>') : '<span style="font-weight: normal;">N/A</span>'}</td>
                             </tr>
                             <tr>
                                 <td class="tab2-titles">Female Records</td>
                             </tr>
                             <tr>
-                                <td class="col-tab2">${currentFeature.get('p_FR') ? currentFeature.get('p_FR') : '<span style="font-weight: normal;">N/A</span>'}</td>
+                                <td class="col-tab2">${currentFeature.get('p_FR') ? currentFeature.get('p_FR').replace(/,\s*/g, '<br>') : '<span style="font-weight: normal;">N/A</span>'}</td>
                             </tr>
                             <tr>
                                 <td class="tab2-titles">Winter Open Records</td>
                                 </tr>
                             <tr>
-                                <td class="col-tab2">${currentFeature.get('p_WOR') ? currentFeature.get('p_WOR') : '<span style="font-weight: normal;">N/A</span>'}</td>
+                                <td class="col-tab2">${currentFeature.get('p_WOR') ? currentFeature.get('p_WOR').replace(/,\s*/g, '<br>') : '<span style="font-weight: normal;">N/A</span>'}</td>
                             </tr>
                             <tr>
                                 <td class="tab2-titles">Winter Female Records</td>
                                 </tr>
                             <tr>
-                                <td class="col-tab2">${currentFeature.get('p_WFR') ? currentFeature.get('p_WFR') : '<span style="font-weight: normal;">N/A</span>'}</td>
+                                <td class="col-tab2">${currentFeature.get('p_WFR') ? currentFeature.get('p_WFR').replace(/,\s*/g, '<br>') : '<span style="font-weight: normal;">N/A</span>'}</td>
                             </tr>
                         </table>
                     </div>
