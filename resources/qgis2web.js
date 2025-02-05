@@ -5,8 +5,6 @@ var map = new ol.Map({
     layers: layersList,
     view: new ol.View({
          maxZoom: 28, minZoom: 1
-         rotation: 0,        // Set rotation to 0
-         enableRotation: false  // Disable rotation functionality
     }),
     interactions: ol.interaction.defaults({ pinchRotate: false }) // Disables multi-touch rotation
 });
